@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import styles from "./style.module.css"
 
 function Filter({lists,setFilteredLists}) {
 
@@ -40,7 +41,9 @@ useEffect(()=>{
 
   return (
     <>
-      <input value={filteredValue} name="filteredValue" placeholder="Filter" onChange={onChangeFilter}/>
+      <div className={styles.title}>
+        <input value={filteredValue} name="filteredValue" placeholder="Filter" onChange={onChangeFilter}/>
+      </div>
     </>
   )
 }
